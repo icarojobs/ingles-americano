@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ingles-americano-tiojobs.netlify.app/sitemap.xml

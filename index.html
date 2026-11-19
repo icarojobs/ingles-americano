@@ -300,8 +300,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <footer><div class="wrap">
   <span>© 2026 Icaro William · Jobs Treinamentos</span>
-  <span>Pagamentos processados pela Kiwify</span>
+  <span>Pagamentos processados pela Kiwify · <a href="afiliados/">Seja afiliado (50%)</a></span>
 </div></footer>
 <div class="sticky"><a class="btn" data-checkout href="https://pay.kiwify.com.br/9NpUGf3" rel="nofollow">Garantir minha vaga · R$ 97</a></div>
+<script>
+/* repassa ao checkout da Kiwify o afiliado (afid) e a origem (src, sck, utm_*) com que a pessoa chegou */
+(function(){var q=new URLSearchParams(location.search),k=["afid","src","sck","utm_source","utm_medium","utm_campaign","utm_content","utm_term"],p=new URLSearchParams();
+k.forEach(function(n){if(q.get(n))p.set(n,q.get(n))});if(!p.toString())return;
+document.querySelectorAll("a[data-checkout]").forEach(function(a){var u=new URL(a.href);p.forEach(function(v,n){u.searchParams.set(n,v)});a.href=u.toString()})})();
+</script>
 </body>
 </html>
